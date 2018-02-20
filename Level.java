@@ -52,4 +52,13 @@ class Level {
         }
         return false;
     }
+
+    ParkingSpot getVehicleParkingSpot(Vehicle vehicle) {
+        for (ParkingSpot spot : spots) {
+            if (spot.getVehicle() == vehicle) {
+                return spot;
+            }
+        }
+        return null;
+    }
 }
